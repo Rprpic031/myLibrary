@@ -1,4 +1,4 @@
-import SmjerService from "../../services/KnjigaService"
+import KnjigaService from "../../services/KnjigaService"
 import { Button, Row, Col, Form } from "react-bootstrap";
 import moment from "moment";
 import { Link, useNavigate, useParams } from "react-router-dom";
@@ -13,7 +13,7 @@ export default function KnjigePromjena() {
     const routeParams = useParams()
 
     async function dohvatiKnjigu() {
-        const odgovor = await SmjerService.getBySifra(routeParams.sifra);
+        const odgovor = await KnjigaService.getBySifra(routeParams.sifra);
         console.log(odgovor, routeParams)
         if (odgovor.greska) {
             alert(odgovor.poruka)
@@ -34,7 +34,7 @@ export default function KnjigePromjena() {
     const [selectedZanr, setSelectedZanr] = useState('')
 
     async function dohvatiZanrove() {
-        const odgovor = await SmjerService.getZanrovi();
+        const odgovor = await KnjigaService.getZanrovi();
         if (odgovor) {
             console.log('zanrovi', odgovor)
             setZanrovi(odgovor.poruka)
@@ -52,7 +52,7 @@ export default function KnjigePromjena() {
     async function promjena(knjiga) {
         //console.log(smjer)
         //console.log(JSON.stringify(smjer))
-        const odgovor = await SmjerService.promjena(routeParams.sifra, knjiga)
+        const odgovor = await KnjigaService.promjena(routeParams.sifra, knjiga)
         if (odgovor.greska) {
             alert(odgovor.poruka)
             return;
@@ -132,7 +132,7 @@ export default function KnjigePromjena() {
                     <Col xs={6} sm={12} md={9} lg={6} xl={6} xxl={6}>
                         <Button variant="success"
                             type="submit"
-                            className="siroko">Promjeni smjer</Button>
+                            className="siroko">Promjeni knjigu</Button>
                     </Col>
                 </Row>
             </Form>

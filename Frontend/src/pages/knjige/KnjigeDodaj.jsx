@@ -1,4 +1,4 @@
-import SmjerService from "../../services/KnjigaService"
+import KnjigaService from "../../services/KnjigaService"
 import { Button, Row, Col, Form } from "react-bootstrap";
 import moment from "moment";
 import { Link, useNavigate } from "react-router-dom";
@@ -13,7 +13,7 @@ export default function KnjigeDodaj() {
     const [selectedZanr, setSelectedZanr] = useState('')
 
     async function dohvatiZanrove() {
-        const odgovor = await SmjerService.getZanrovi();
+        const odgovor = await KnjigaService.getZanrovi();
         if (odgovor) {
             console.log('zanrovi', odgovor)
             setZanrovi(odgovor.poruka)
@@ -29,9 +29,8 @@ export default function KnjigeDodaj() {
     }, [])
 
     async function dodaj(knjiga) {
-        //console.log(smjer)
         //console.log(JSON.stringify(smjer))
-        const odgovor = await SmjerService.dodaj(knjiga)
+        const odgovor = await KnjigaService.dodaj(knjiga)
         if (odgovor.greska) {
             alert(odgovor.poruka)
             return;
