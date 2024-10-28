@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit https://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project>
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAGpn5RfC6/UuiA3sXzmq2agAAAAACAAAAAAAQZgAAAAEAACAAAABH9FsNUhglcWMWu8MfXTJAXSmK7GsHWiAd64mNziywNQAAAAAOgAAAAAIAACAAAAAyGBfg4MFb3BHR8n12DpBNbgG+bQYST+IDZt+Hg7XXFCAAAABFB/yCu1XuBlBTMCVyg43oPhqAF500bUz7pSTajVzItkAAAABTh80+ZXkXV0xtBD2K624J9p6ZeN1GPvzA4+64QUTCIJViuSUwtVZcZHhjnKW6+A5JeM+Z9sF2ovfpW3ii3Awq</EncryptedPassword>
+    <History>True|2024-10-28T17:04:25.0591105Z||;True|2024-10-28T17:59:36.0640796+01:00||;True|2024-10-28T16:32:28.1021422+01:00||;True|2024-10-28T11:06:37.2927380+01:00||;True|2024-10-25T17:38:14.6193125+02:00||;True|2024-10-25T17:30:08.4982857+02:00||;True|2024-10-25T17:21:16.9921057+02:00||;True|2024-10-25T17:16:34.9743105+02:00||;True|2024-10-25T17:09:27.0928014+02:00||;</History>
+    <LastFailureDetails />
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="LibraryContext">
+      <Value>Data Source=SQL5113.site4now.net%3bInitial Catalog=db_aae6f8_maringlavas%3bUser Id=db_aae6f8_maringlavas_admin%3bPassword=marin123</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+  <ItemGroup>
+    <EFMigrations Include="Library.Data.LibraryContext">
+      <Value>Data Source=SQL5113.site4now.net%3bInitial Catalog=db_aae6f8_maringlavas%3bUser Id=db_aae6f8_maringlavas_admin%3bPassword=marin123</Value>
+    </EFMigrations>
+  </ItemGroup>
+</Project>
